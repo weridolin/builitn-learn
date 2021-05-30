@@ -37,6 +37,9 @@ class Test2(object):
     def static_method():
         print("this is a static method")
 
+    def instance_method(self):
+        print(self.cls_nam)
+
 
 ## call class method directly
 Test2.cls_method()
@@ -46,6 +49,8 @@ t = Test2()
 t.cls_method()
 t2 = Test2()
 t2.cls_method()
+
+t2.instance_method()
 
 ## 直接调用静态方法，直接当成函数调用，其并不知道类属性和实例属性
 Test2.static_method()
